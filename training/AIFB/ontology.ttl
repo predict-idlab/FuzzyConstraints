@@ -1,0 +1,782 @@
+@prefix : <http://swrc.ontoware.org/ontology#> .
+@prefix b: <http://www.aifb.uni-karlsruhe.de/WBS/dvr/owltools/merge/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///Users/proxyhunter/Desktop/BIRDS/embedding/training/AIFB/ontology.n3> a owl:Ontology .
+
+:AdministrativeStaff a owl:Class ;
+    rdfs:subClassOf :Employee .
+
+:Article a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :pages ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :volume ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :journal ],
+        :Publication .
+
+:AssistantProfessor a owl:Class ;
+    rdfs:subClassOf :FacultyMember .
+
+:AssociateProfessor a owl:Class ;
+    rdfs:subClassOf :FacultyMember .
+
+:Association a owl:Class ;
+    rdfs:subClassOf :Organization .
+
+:Book a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :price ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :source ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :volume ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :editor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :publisher ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :edition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :isbn ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        :Publication .
+
+:Booklet a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :howpublished ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        :Publication .
+
+:Conference a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        :Event .
+
+:Enterprise a owl:Class ;
+    rdfs:subClassOf :Organization .
+
+:Exhibition a owl:Class ;
+    rdfs:subClassOf :Event .
+
+:FullProfessor a owl:Class ;
+    rdfs:subClassOf :FacultyMember .
+
+:InBook a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :chapter ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :edition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :pages ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :volume ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :editor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :publisher ],
+        :Publication .
+
+:InCollection a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :booktitle ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :chapter ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :edition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :pages ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :volume ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :editor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :publisher ],
+        :Publication .
+
+:InProceedings a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :booktitle ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :pages ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :volume ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :editor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :organization ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :publisher ],
+        :Publication .
+
+:Lecture a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :givenBy ],
+        :Event .
+
+:Lecturer a owl:Class ;
+    rdfs:subClassOf :AcademicStaff .
+
+:Manager a owl:Class ;
+    rdfs:subClassOf :Employee .
+
+:Manual a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :edition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :organization ],
+        :Publication .
+
+:MasterThesis a owl:Class ;
+    rdfs:subClassOf :Thesis .
+
+:Misc a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :howpublished ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        :Publication .
+
+:PhDThesis a owl:Class ;
+    rdfs:subClassOf :Thesis .
+
+:Proceedings a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :volume ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :editor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :organization ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :publisher ],
+        :Publication .
+
+:ProjectMeeting a owl:Class ;
+    rdfs:subClassOf :Meeting .
+
+:ProjectReport a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Project ;
+            owl:onProperty :describesProject ],
+        :Report .
+
+:ResearchProject a owl:Class ;
+    rdfs:subClassOf :Project .
+
+:SoftwareComponent a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :hasPrice ],
+        :Product .
+
+:SoftwareProject a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Product ;
+            owl:onProperty :product ],
+        :DevelopmentProject .
+
+:TechnicalStaff a owl:Class ;
+    rdfs:subClassOf :Employee .
+
+:Undergraduate a owl:Class ;
+    rdfs:subClassOf :Student .
+
+:Unpublished a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        :Publication .
+
+:Workshop a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        :Event .
+
+:hasProject a owl:ObjectProperty .
+
+b:type a owl:DatatypeProperty .
+
+:Department a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Institute ;
+            owl:onProperty :hasParts ],
+        :Organization .
+
+:DevelopmentProject a owl:Class ;
+    rdfs:subClassOf :Project .
+
+:Graduate a owl:Class ;
+    rdfs:subClassOf :Student .
+
+:Meeting a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :participant ],
+        :Event .
+
+:PhDStudent a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Publication ;
+            owl:onProperty :publication ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :AcademicStaff ;
+            owl:onProperty :supervisor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Project ;
+            owl:onProperty :worksAtProject ],
+        :Graduate .
+
+:ResearchTopic a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Project ;
+            owl:onProperty :dealtWithIn ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :AcademicStaff ;
+            owl:onProperty :isWorkedOnBy ],
+        :Topic .
+
+:TechnicalReport a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :series ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :organization ],
+        :Report .
+
+:Topic a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :name ] .
+
+:abstract a owl:DatatypeProperty .
+
+:carriesOut a owl:ObjectProperty ;
+    owl:inverseOf :carriedOutBy .
+
+:citedBy a owl:ObjectProperty ;
+    rdfs:range owl:Thing ;
+    owl:inverseOf :cite .
+
+:dealtWithIn a owl:ObjectProperty .
+
+:develops a owl:ObjectProperty ;
+    owl:inverseOf :developedBy .
+
+:email a owl:DatatypeProperty .
+
+:employs a owl:ObjectProperty ;
+    owl:inverseOf :affiliation .
+
+:eventTitle a owl:DatatypeProperty .
+
+:fax a owl:DatatypeProperty .
+
+:financedBy a owl:ObjectProperty .
+
+:finances a owl:ObjectProperty .
+
+:givenBy a owl:ObjectProperty .
+
+:hasPartEvent a owl:ObjectProperty ;
+    owl:inverseOf :atEvent .
+
+:hasPrice a owl:DatatypeProperty .
+
+:headOf a owl:ObjectProperty .
+
+:headOfGroup a owl:ObjectProperty ;
+    owl:inverseOf :head .
+
+:homepage a owl:DatatypeProperty .
+
+:isAbout a owl:ObjectProperty .
+
+:isWorkedOnBy a owl:ObjectProperty .
+
+:isbn a owl:DatatypeProperty .
+
+:journal a owl:DatatypeProperty .
+
+:keywords a owl:DatatypeProperty .
+
+:memberOfPC a owl:ObjectProperty .
+
+:note a owl:DatatypeProperty .
+
+:organizerOrChairOf a owl:ObjectProperty .
+
+:participant a owl:ObjectProperty .
+
+:phone a owl:DatatypeProperty .
+
+:photo a owl:DatatypeProperty .
+
+:price a owl:DatatypeProperty .
+
+:product a owl:ObjectProperty .
+
+:projectInfo a owl:ObjectProperty ;
+    owl:inverseOf :describesProject .
+
+:school a owl:ObjectProperty .
+
+:source a owl:DatatypeProperty .
+
+:student a owl:ObjectProperty .
+
+:studiesAt a owl:ObjectProperty .
+
+:supervisor a owl:ObjectProperty ;
+    owl:inverseOf :supervises .
+
+:technicalReport a owl:ObjectProperty .
+
+:year a owl:DatatypeProperty .
+
+owl:Thing a owl:Class .
+
+:Institute a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Institute ;
+            owl:onProperty :cooperateWith ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :ResearchGroup ;
+            owl:onProperty :hasParts ],
+        :Organization .
+
+:Report a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        :Publication .
+
+:ResearchGroup a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Employee ;
+            owl:onProperty :head ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Employee ;
+            owl:onProperty :member ],
+        :Organization .
+
+:Thesis a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :University ;
+            owl:onProperty :school ],
+        :Publication .
+
+:University a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Department ;
+            owl:onProperty :hasParts ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Student ;
+            owl:onProperty :student ],
+        :Organization .
+
+:affiliation a owl:ObjectProperty .
+
+:atEvent a owl:ObjectProperty .
+
+:booktitle a owl:DatatypeProperty .
+
+:carriedOutBy a owl:ObjectProperty .
+
+:chapter a owl:DatatypeProperty .
+
+:cite a owl:ObjectProperty ;
+    owl:inverseOf :citedBy .
+
+:cooperateWith a owl:ObjectProperty .
+
+:date a owl:DatatypeProperty .
+
+:describesProject a owl:ObjectProperty .
+
+:developedBy a owl:ObjectProperty .
+
+:howpublished a owl:DatatypeProperty .
+
+:location a owl:DatatypeProperty .
+
+:member a owl:ObjectProperty .
+
+:publication a owl:ObjectProperty .
+
+:publishes a owl:ObjectProperty .
+
+:supervises a owl:ObjectProperty .
+
+:title a owl:DatatypeProperty .
+
+:worksAtProject a owl:ObjectProperty .
+
+:FacultyMember a owl:Class ;
+    rdfs:subClassOf :AcademicStaff .
+
+:Product a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :developedBy ] .
+
+:Student a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :University ;
+            owl:onProperty :studiesAt ],
+        :Person .
+
+:hasParts a owl:ObjectProperty .
+
+:head a owl:ObjectProperty .
+
+:type a owl:DatatypeProperty .
+
+:edition a owl:DatatypeProperty .
+
+:organization a owl:ObjectProperty .
+
+:pages a owl:DatatypeProperty .
+
+:AcademicStaff a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Publication ;
+            owl:onProperty :editor ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Project ;
+            owl:onProperty :headOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :ResearchGroup ;
+            owl:onProperty :headOfGroup ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Event ;
+            owl:onProperty :memberOfPC ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Event ;
+            owl:onProperty :organizerOrChairOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Publication ;
+            owl:onProperty :publication ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :PhDStudent ;
+            owl:onProperty :supervises ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Project ;
+            owl:onProperty :worksAtProject ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :AcademicStaff ;
+            owl:onProperty :cooperateWith ],
+        :Employee .
+
+:publisher a owl:ObjectProperty ;
+    owl:inverseOf :publishes .
+
+:editor a owl:ObjectProperty .
+
+:name a owl:DatatypeProperty .
+
+:number a owl:DatatypeProperty .
+
+:volume a owl:DatatypeProperty .
+
+:Employee a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :affiliation ],
+        :Person .
+
+:series a owl:DatatypeProperty .
+
+:Event a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :eventTitle ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :location ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Event ;
+            owl:onProperty :atEvent ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Event ;
+            owl:onProperty :hasPartEvent ] .
+
+:Project a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :carriedOutBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Organization ;
+            owl:onProperty :financedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Employee ;
+            owl:onProperty :head ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :ResearchTopic ;
+            owl:onProperty :isAbout ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :member ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Publication ;
+            owl:onProperty :projectInfo ] .
+
+:address a owl:DatatypeProperty .
+
+:author a owl:ObjectProperty .
+
+:month a owl:DatatypeProperty .
+
+:Publication a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :abstract ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :keywords ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :note ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :year ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Publication ;
+            owl:onProperty :cite ] .
+
+:Organization a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :location ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Project ;
+            owl:onProperty :carriesOut ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Product ;
+            owl:onProperty :develops ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Person ;
+            owl:onProperty :employs ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Project ;
+            owl:onProperty :finances ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :Publication ;
+            owl:onProperty :publishes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom :TechnicalReport ;
+            owl:onProperty :technicalReport ] .
+
+:Person a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :homepage ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :phone ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :photo ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :address ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :email ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty :fax ] .
+
+xsd:string a owl:Datatype .
+

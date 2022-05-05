@@ -1,0 +1,148 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdf:type
+  rdf:type rdf:Property ;
+  rdfs:comment "The subject is an instance of a class." ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "type" ;
+  rdfs:range rdfs:Class ;
+.
+rdf:
+  rdf:type owl:Ontology ;
+  dc:description "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts." ;
+  dc:title "The RDF Concepts Vocabulary (RDF)" ;
+  owl:imports <http://datashapes.org/dash> ;
+.
+rdf:Alt
+  rdf:type rdfs:Class ;
+  rdfs:comment "The class of containers of alternatives." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "Alt" ;
+  rdfs:subClassOf rdfs:Container ;
+.
+rdf:Bag
+  rdf:type rdfs:Class ;
+  rdfs:comment "The class of unordered containers." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "Bag" ;
+  rdfs:subClassOf rdfs:Container ;
+.
+rdf:HTML
+  rdf:type rdfs:Datatype ;
+  rdfs:comment "The datatype of RDF literals storing fragments of HTML content" ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "HTML" ;
+  rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-html> ;
+  rdfs:subClassOf rdfs:Literal ;
+.
+rdf:List
+  rdf:type rdfs:Class ;
+  rdfs:comment "The class of RDF Lists." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "List" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+rdf:PlainLiteral
+  rdf:type rdfs:Datatype ;
+  rdfs:comment "The class of plain (i.e. untyped) literal values, as used in RIF and OWL 2" ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "PlainLiteral" ;
+  rdfs:seeAlso <http://www.w3.org/TR/rdf-plain-literal/> ;
+  rdfs:subClassOf rdfs:Literal ;
+.
+rdf:Property
+  rdf:type rdfs:Class ;
+  rdfs:comment "The class of RDF properties." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "Property" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+rdf:Seq
+  rdf:type rdfs:Class ;
+  rdfs:comment "The class of ordered containers." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "Seq" ;
+  rdfs:subClassOf rdfs:Container ;
+.
+rdf:Statement
+  rdf:type rdfs:Class ;
+  rdfs:comment "The class of RDF statements." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "Statement" ;
+  rdfs:subClassOf rdfs:Resource ;
+.
+rdf:XMLLiteral
+  rdf:type rdfs:Datatype ;
+  rdfs:comment "The datatype of XML literal values." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "XMLLiteral" ;
+  rdfs:subClassOf rdfs:Literal ;
+.
+rdf:first
+  rdf:type rdf:Property ;
+  rdfs:comment "The first item in the subject RDF list." ;
+  rdfs:domain rdf:List ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "first" ;
+  rdfs:range rdfs:Resource ;
+.
+rdf:langString
+  rdf:type rdfs:Datatype ;
+  rdfs:comment "The datatype of language-tagged string values" ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "langString" ;
+  rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal> ;
+  rdfs:subClassOf rdfs:Literal ;
+.
+()
+  rdf:type rdf:List ;
+  rdfs:comment "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it." ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "nil" ;
+.
+rdf:object
+  rdf:type rdf:Property ;
+  rdfs:comment "The object of the subject RDF statement." ;
+  rdfs:domain rdf:Statement ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "object" ;
+  rdfs:range rdfs:Resource ;
+.
+rdf:predicate
+  rdf:type rdf:Property ;
+  rdfs:comment "The predicate of the subject RDF statement." ;
+  rdfs:domain rdf:Statement ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "predicate" ;
+  rdfs:range rdfs:Resource ;
+.
+rdf:rest
+  rdf:type rdf:Property ;
+  rdfs:comment "The rest of the subject RDF list after the first item." ;
+  rdfs:domain rdf:List ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "rest" ;
+  rdfs:range rdf:List ;
+.
+rdf:subject
+  rdf:type rdf:Property ;
+  rdfs:comment "The subject of the subject RDF statement." ;
+  rdfs:domain rdf:Statement ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "subject" ;
+  rdfs:range rdfs:Resource ;
+.
+rdf:value
+  rdf:type rdf:Property ;
+  rdfs:comment "Idiomatic property used for structured values." ;
+  rdfs:domain rdfs:Resource ;
+  rdfs:isDefinedBy rdf: ;
+  rdfs:label "value" ;
+  rdfs:range rdfs:Resource ;
+.

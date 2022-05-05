@@ -1,0 +1,849 @@
+@prefix : <http://dl-learner.org/carcinogenesis#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl11: <http://www.w3.org/2006/12/owl11#> .
+@prefix owl11xml: <http://www.w3.org/2006/12/owl11-xml#> .
+@prefix carcinogenesis: <http://dl-learner.org/carcinogenesis#> .
+@base <http://dl-learner.org/carcinogenesis> .
+
+<http://dl-learner.org/carcinogenesis> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dl-learner.org/carcinogenesis#hasAtom
+carcinogenesis:hasAtom rdf:type owl:ObjectProperty ;
+                       rdfs:domain carcinogenesis:Compound ;
+                       rdfs:range carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#hasBond
+carcinogenesis:hasBond rdf:type owl:ObjectProperty ;
+                       rdfs:domain carcinogenesis:Compound ;
+                       rdfs:range carcinogenesis:Bond .
+
+
+###  http://dl-learner.org/carcinogenesis#hasStructure
+carcinogenesis:hasStructure rdf:type owl:ObjectProperty ;
+                            rdfs:domain carcinogenesis:Compound ;
+                            rdfs:range carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#inBond
+carcinogenesis:inBond rdf:type owl:ObjectProperty ;
+                      rdfs:domain carcinogenesis:Bond ;
+                      rdfs:range carcinogenesis:Atom .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dl-learner.org/carcinogenesis#amesTestPositive
+carcinogenesis:amesTestPositive rdf:type owl:DatatypeProperty ;
+                                rdfs:domain carcinogenesis:Compound ;
+                                rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#charge
+carcinogenesis:charge rdf:type owl:DatatypeProperty ;
+                      rdfs:domain carcinogenesis:Atom ;
+                      rdfs:range xsd:double .
+
+
+###  http://dl-learner.org/carcinogenesis#chromaberr
+carcinogenesis:chromaberr rdf:type owl:DatatypeProperty ;
+                          rdfs:domain carcinogenesis:Compound ;
+                          rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#chromex
+carcinogenesis:chromex rdf:type owl:DatatypeProperty ;
+                       rdfs:domain carcinogenesis:Compound ;
+                       rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#cytogen_ca
+carcinogenesis:cytogen_ca rdf:type owl:DatatypeProperty ;
+                          rdfs:domain carcinogenesis:Compound ;
+                          rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#cytogen_sce
+carcinogenesis:cytogen_sce rdf:type owl:DatatypeProperty ;
+                           rdfs:domain carcinogenesis:Compound ;
+                           rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#drosophila_rt
+carcinogenesis:drosophila_rt rdf:type owl:DatatypeProperty ;
+                             rdfs:domain carcinogenesis:Compound ;
+                             rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#drosophila_slrl
+carcinogenesis:drosophila_slrl rdf:type owl:DatatypeProperty ;
+                               rdfs:domain carcinogenesis:Compound ;
+                               rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#isMutagenic
+carcinogenesis:isMutagenic rdf:type owl:DatatypeProperty ;
+                           rdfs:domain carcinogenesis:Compound ;
+                           rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#micronuc_f
+carcinogenesis:micronuc_f rdf:type owl:DatatypeProperty ;
+                          rdfs:domain carcinogenesis:Compound ;
+                          rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#micronuc_m
+carcinogenesis:micronuc_m rdf:type owl:DatatypeProperty ;
+                          rdfs:domain carcinogenesis:Compound ;
+                          rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#mouse_lymph
+carcinogenesis:mouse_lymph rdf:type owl:DatatypeProperty ;
+                           rdfs:domain carcinogenesis:Compound ;
+                           rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#salmonella
+carcinogenesis:salmonella rdf:type owl:DatatypeProperty ;
+                          rdfs:domain carcinogenesis:Compound ;
+                          rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#salmonella_n
+carcinogenesis:salmonella_n rdf:type owl:DatatypeProperty ;
+                            rdfs:domain carcinogenesis:Compound ;
+                            rdfs:range xsd:boolean .
+
+
+###  http://dl-learner.org/carcinogenesis#salmonella_reduc
+carcinogenesis:salmonella_reduc rdf:type owl:DatatypeProperty ;
+                                rdfs:domain carcinogenesis:Compound ;
+                                rdfs:range xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dl-learner.org/carcinogenesis#Alcohol
+carcinogenesis:Alcohol rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Alkyl_halide
+carcinogenesis:Alkyl_halide rdf:type owl:Class ;
+                            rdfs:subClassOf carcinogenesis:Halide .
+
+
+###  http://dl-learner.org/carcinogenesis#Amine
+carcinogenesis:Amine rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Amino
+carcinogenesis:Amino rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Ar_halide
+carcinogenesis:Ar_halide rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Halide .
+
+
+###  http://dl-learner.org/carcinogenesis#Arsenic
+carcinogenesis:Arsenic rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Arsenic-101
+carcinogenesis:Arsenic-101 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Arsenic .
+
+
+###  http://dl-learner.org/carcinogenesis#Atom
+carcinogenesis:Atom rdf:type owl:Class ;
+                    owl:disjointWith carcinogenesis:Bond ,
+                                     carcinogenesis:Compound ,
+                                     carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Barium
+carcinogenesis:Barium rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Barium-115
+carcinogenesis:Barium-115 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Barium .
+
+
+###  http://dl-learner.org/carcinogenesis#Bond
+carcinogenesis:Bond rdf:type owl:Class ;
+                    owl:disjointWith carcinogenesis:Compound ,
+                                     carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Bond-1
+carcinogenesis:Bond-1 rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Bond .
+
+
+###  http://dl-learner.org/carcinogenesis#Bond-2
+carcinogenesis:Bond-2 rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Bond .
+
+
+###  http://dl-learner.org/carcinogenesis#Bond-3
+carcinogenesis:Bond-3 rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Bond .
+
+
+###  http://dl-learner.org/carcinogenesis#Bond-7
+carcinogenesis:Bond-7 rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Bond .
+
+
+###  http://dl-learner.org/carcinogenesis#Bromine
+carcinogenesis:Bromine rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Bromine-94
+carcinogenesis:Bromine-94 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Bromine .
+
+
+###  http://dl-learner.org/carcinogenesis#Calcium
+carcinogenesis:Calcium rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Calcium-84
+carcinogenesis:Calcium-84 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Calcium .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon
+carcinogenesis:Carbon rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-10
+carcinogenesis:Carbon-10 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-14
+carcinogenesis:Carbon-14 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-15
+carcinogenesis:Carbon-15 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-16
+carcinogenesis:Carbon-16 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-17
+carcinogenesis:Carbon-17 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-19
+carcinogenesis:Carbon-19 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-191
+carcinogenesis:Carbon-191 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-192
+carcinogenesis:Carbon-192 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-193
+carcinogenesis:Carbon-193 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-21
+carcinogenesis:Carbon-21 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-22
+carcinogenesis:Carbon-22 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-232
+carcinogenesis:Carbon-232 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-26
+carcinogenesis:Carbon-26 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-27
+carcinogenesis:Carbon-27 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Carbon-29
+carcinogenesis:Carbon-29 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Carbon .
+
+
+###  http://dl-learner.org/carcinogenesis#Chlorine
+carcinogenesis:Chlorine rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Chlorine-93
+carcinogenesis:Chlorine-93 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Chlorine .
+
+
+###  http://dl-learner.org/carcinogenesis#Compound
+carcinogenesis:Compound rdf:type owl:Class ;
+                        owl:disjointWith carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Copper
+carcinogenesis:Copper rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Copper-96
+carcinogenesis:Copper-96 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Copper .
+
+
+###  http://dl-learner.org/carcinogenesis#Cyanate
+carcinogenesis:Cyanate rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Di
+carcinogenesis:Di rdf:type owl:Class ;
+                  rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Di10
+carcinogenesis:Di10 rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di227
+carcinogenesis:Di227 rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di23
+carcinogenesis:Di23 rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di232
+carcinogenesis:Di232 rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di260
+carcinogenesis:Di260 rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di281
+carcinogenesis:Di281 rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di48
+carcinogenesis:Di48 rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di51
+carcinogenesis:Di51 rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di64
+carcinogenesis:Di64 rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di66
+carcinogenesis:Di66 rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di67a
+carcinogenesis:Di67a rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Di8
+carcinogenesis:Di8 rdf:type owl:Class ;
+                   rdfs:subClassOf carcinogenesis:Di .
+
+
+###  http://dl-learner.org/carcinogenesis#Ester
+carcinogenesis:Ester rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Ether
+carcinogenesis:Ether rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Ethoxy
+carcinogenesis:Ethoxy rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Five_ring
+carcinogenesis:Five_ring rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Ring .
+
+
+###  http://dl-learner.org/carcinogenesis#Fluorine
+carcinogenesis:Fluorine rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Fluorine-92
+carcinogenesis:Fluorine-92 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Fluorine .
+
+
+###  http://dl-learner.org/carcinogenesis#Gallium
+carcinogenesis:Gallium rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Halide
+carcinogenesis:Halide rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Halide10
+carcinogenesis:Halide10 rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Halide .
+
+
+###  http://dl-learner.org/carcinogenesis#Hydrogen
+carcinogenesis:Hydrogen rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Hydrogen-1
+carcinogenesis:Hydrogen-1 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Hydrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Hydrogen-2
+carcinogenesis:Hydrogen-2 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Hydrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Hydrogen-3
+carcinogenesis:Hydrogen-3 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Hydrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Hydrogen-8
+carcinogenesis:Hydrogen-8 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Hydrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Imine
+carcinogenesis:Imine rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Iodine
+carcinogenesis:Iodine rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Iodine-95
+carcinogenesis:Iodine-95 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Iodine .
+
+
+###  http://dl-learner.org/carcinogenesis#Ketone
+carcinogenesis:Ketone rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Krypton
+carcinogenesis:Krypton rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Krypton-83
+carcinogenesis:Krypton-83 rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Krypton .
+
+
+###  http://dl-learner.org/carcinogenesis#Lead
+carcinogenesis:Lead rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Lead-121
+carcinogenesis:Lead-121 rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Lead .
+
+
+###  http://dl-learner.org/carcinogenesis#Manganese
+carcinogenesis:Manganese rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Manganese-85
+carcinogenesis:Manganese-85 rdf:type owl:Class ;
+                            rdfs:subClassOf carcinogenesis:Manganese .
+
+
+###  http://dl-learner.org/carcinogenesis#Mercury
+carcinogenesis:Mercury rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Mercury-120
+carcinogenesis:Mercury-120 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Mercury .
+
+
+###  http://dl-learner.org/carcinogenesis#Methanol
+carcinogenesis:Methanol rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Methoxy
+carcinogenesis:Methoxy rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Methyl
+carcinogenesis:Methyl rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Molybdenum
+carcinogenesis:Molybdenum rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitro
+carcinogenesis:Nitro rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen
+carcinogenesis:Nitrogen rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-31
+carcinogenesis:Nitrogen-31 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-32
+carcinogenesis:Nitrogen-32 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-33
+carcinogenesis:Nitrogen-33 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-34
+carcinogenesis:Nitrogen-34 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-35
+carcinogenesis:Nitrogen-35 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-36
+carcinogenesis:Nitrogen-36 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-37
+carcinogenesis:Nitrogen-37 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-38
+carcinogenesis:Nitrogen-38 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Nitrogen-499
+carcinogenesis:Nitrogen-499 rdf:type owl:Class ;
+                            rdfs:subClassOf carcinogenesis:Nitrogen .
+
+
+###  http://dl-learner.org/carcinogenesis#Non_ar_5c_ring
+carcinogenesis:Non_ar_5c_ring rdf:type owl:Class ;
+                              rdfs:subClassOf carcinogenesis:Ring .
+
+
+###  http://dl-learner.org/carcinogenesis#Non_ar_6c_ring
+carcinogenesis:Non_ar_6c_ring rdf:type owl:Class ;
+                              rdfs:subClassOf carcinogenesis:Ring .
+
+
+###  http://dl-learner.org/carcinogenesis#Non_ar_hetero_5_ring
+carcinogenesis:Non_ar_hetero_5_ring rdf:type owl:Class ;
+                                    rdfs:subClassOf carcinogenesis:Ring .
+
+
+###  http://dl-learner.org/carcinogenesis#Non_ar_hetero_6_ring
+carcinogenesis:Non_ar_hetero_6_ring rdf:type owl:Class ;
+                                    rdfs:subClassOf carcinogenesis:Ring .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen
+carcinogenesis:Oxygen rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-40
+carcinogenesis:Oxygen-40 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-41
+carcinogenesis:Oxygen-41 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-42
+carcinogenesis:Oxygen-42 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-45
+carcinogenesis:Oxygen-45 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-49
+carcinogenesis:Oxygen-49 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-50
+carcinogenesis:Oxygen-50 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-51
+carcinogenesis:Oxygen-51 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-52
+carcinogenesis:Oxygen-52 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Oxygen-53
+carcinogenesis:Oxygen-53 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Oxygen .
+
+
+###  http://dl-learner.org/carcinogenesis#Phenol
+carcinogenesis:Phenol rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Phosphorus
+carcinogenesis:Phosphorus rdf:type owl:Class ;
+                          rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Phosphorus-60
+carcinogenesis:Phosphorus-60 rdf:type owl:Class ;
+                             rdfs:subClassOf carcinogenesis:Phosphorus .
+
+
+###  http://dl-learner.org/carcinogenesis#Phosphorus-61
+carcinogenesis:Phosphorus-61 rdf:type owl:Class ;
+                             rdfs:subClassOf carcinogenesis:Phosphorus .
+
+
+###  http://dl-learner.org/carcinogenesis#Phosphorus-62
+carcinogenesis:Phosphorus-62 rdf:type owl:Class ;
+                             rdfs:subClassOf carcinogenesis:Phosphorus .
+
+
+###  http://dl-learner.org/carcinogenesis#Ring
+carcinogenesis:Ring rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Ring_size_4
+carcinogenesis:Ring_size_4 rdf:type owl:Class ;
+                           rdfs:subClassOf carcinogenesis:Ring .
+
+
+###  http://dl-learner.org/carcinogenesis#Selenium
+carcinogenesis:Selenium rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Selenium-102
+carcinogenesis:Selenium-102 rdf:type owl:Class ;
+                            rdfs:subClassOf carcinogenesis:Selenium .
+
+
+###  http://dl-learner.org/carcinogenesis#Six_ring
+carcinogenesis:Six_ring rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Ring .
+
+
+###  http://dl-learner.org/carcinogenesis#Sodium
+carcinogenesis:Sodium rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Sodium-81
+carcinogenesis:Sodium-81 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sodium .
+
+
+###  http://dl-learner.org/carcinogenesis#Structure
+carcinogenesis:Structure rdf:type owl:Class .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfide
+carcinogenesis:Sulfide rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfo
+carcinogenesis:Sulfo rdf:type owl:Class ;
+                     rdfs:subClassOf carcinogenesis:Structure .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur
+carcinogenesis:Sulfur rdf:type owl:Class ;
+                      rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-70
+carcinogenesis:Sulfur-70 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-72
+carcinogenesis:Sulfur-72 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-74
+carcinogenesis:Sulfur-74 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-75
+carcinogenesis:Sulfur-75 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-76
+carcinogenesis:Sulfur-76 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-77
+carcinogenesis:Sulfur-77 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-78
+carcinogenesis:Sulfur-78 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Sulfur-79
+carcinogenesis:Sulfur-79 rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Sulfur .
+
+
+###  http://dl-learner.org/carcinogenesis#Tellurium
+carcinogenesis:Tellurium rdf:type owl:Class ;
+                         rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Tellurium-129
+carcinogenesis:Tellurium-129 rdf:type owl:Class ;
+                             rdfs:subClassOf carcinogenesis:Tellurium .
+
+
+###  http://dl-learner.org/carcinogenesis#Tin
+carcinogenesis:Tin rdf:type owl:Class ;
+                   rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Tin-113
+carcinogenesis:Tin-113 rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Tin .
+
+
+###  http://dl-learner.org/carcinogenesis#Titanium
+carcinogenesis:Titanium rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Titanium-134
+carcinogenesis:Titanium-134 rdf:type owl:Class ;
+                            rdfs:subClassOf carcinogenesis:Titanium .
+
+
+###  http://dl-learner.org/carcinogenesis#Vanadium
+carcinogenesis:Vanadium rdf:type owl:Class ;
+                        rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Zinc
+carcinogenesis:Zinc rdf:type owl:Class ;
+                    rdfs:subClassOf carcinogenesis:Atom .
+
+
+###  http://dl-learner.org/carcinogenesis#Zinc-87
+carcinogenesis:Zinc-87 rdf:type owl:Class ;
+                       rdfs:subClassOf carcinogenesis:Zinc .
