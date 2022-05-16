@@ -11,12 +11,13 @@ Running
 2. Preferably create a virtual environment (`conda create --name fuzzyconstraints`) and activate it (`conda activate fuzzyconstraints`).
 3. `cd` to the project's root folder and install all required packages: `pip install -r requirements.txt`.
 4. Run `python tests.py` with default parameters `TransE reference AIFB 0 0 0 0 1` to run a basic test.
+5. To run all tests, use "all_tests.sh", or see "all_tests.txt" for a complete overview of all individual tests.
 
 Project Organization
 ------------
 
     |-- BaseModule.py
-    |-- LICENSE             <-- ...
+    |-- LICENSE             
     |-- Multimodal.py       <-- Functionality to create multi-modal (i.e., literal-based) embeddings.
     |-- README.md           
     |-- __init__.py

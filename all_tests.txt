@@ -1,0 +1,120 @@
+python -u tests.py TransE reference AIFB 0 0 0 0 1
+python -u tests.py TransE reference AIFB 0 0 0 0 5
+python -u tests.py TransE reference AIFB 0 1 1 0 1
+python -u tests.py TransE reference AIFB 0 1 1 0 5
+
+python -u tests.py TransE reference MUTAG 0 0 0 0 1
+python -u tests.py TransE reference MUTAG 0 0 0 0 5
+python -u tests.py TransE reference MUTAG 0 1 1 0 1
+python -u tests.py TransE reference MUTAG 0 1 1 0 5
+
+python -u tests.py TransE clustering AIFB 0 0 0 0 1
+python -u tests.py TransE clustering AIFB 0 0 0 0 5
+python -u tests.py TransE clustering AIFB 0 1 1 0 1
+python -u tests.py TransE clustering AIFB 0 1 1 0 5
+
+python -u tests.py TransE clustering MUTAG 0 0 0 0 1
+python -u tests.py TransE clustering MUTAG 0 0 0 0 5
+python -u tests.py TransE clustering MUTAG 0 1 1 0 1
+python -u tests.py TransE clustering MUTAG 0 1 1 0 5
+
+python -u tests.py TransE lcwa AIFB 0 0 0 0 1
+python -u tests.py TransE lcwa AIFB 0 0 0 0 5
+python -u tests.py TransE lcwa AIFB 0 1 1 0 1
+python -u tests.py TransE lcwa AIFB 0 1 1 0 5
+
+python -u tests.py TransE lcwa MUTAG 0 0 0 0 1
+python -u tests.py TransE lcwa MUTAG 0 0 0 0 5
+python -u tests.py TransE lcwa MUTAG 0 1 1 0 1
+python -u tests.py TransE lcwa MUTAG 0 1 1 0 5
+
+python -u tests.py TransE strict AIFB 0 0 0 0 1
+python -u tests.py TransE strict AIFB 0 0 0 0 5
+python -u tests.py TransE strict AIFB 0 1 1 0 1
+python -u tests.py TransE strict AIFB 0 1 1 0 5
+
+python -u tests.py TransE strict MUTAG 0 0 0 0 1
+python -u tests.py TransE strict MUTAG 0 0 0 0 5
+python -u tests.py TransE strict MUTAG 0 1 1 0 1
+python -u tests.py TransE strict MUTAG 0 1 1 0 5
+
+python -u tests.py TransE standard AIFB 0 0 0 0 1
+python -u tests.py TransE standard AIFB 0 0 0 0 5
+python -u tests.py TransE standard AIFB 0 1 1 0 1
+python -u tests.py TransE standard AIFB 0 1 1 0 5
+
+python -u tests.py TransE standard MUTAG 0 0 0 0 1
+python -u tests.py TransE standard MUTAG 0 0 0 0 5
+python -u tests.py TransE standard MUTAG 0 1 1 0 1
+python -u tests.py TransE standard MUTAG 0 1 1 0 5
+
+python -u tests.py TransE hybrid AIFB 0 0 0 0 1
+python -u tests.py TransE hybrid AIFB 0 0 0 0 5
+python -u tests.py TransE hybrid AIFB 0 1 1 0 1
+python -u tests.py TransE hybrid AIFB 0 1 1 0 5
+
+python -u tests.py TransE hybrid MUTAG 0 0 0 0 1
+python -u tests.py TransE hybrid MUTAG 0 0 0 0 5
+python -u tests.py TransE hybrid MUTAG 0 1 1 0 1
+python -u tests.py TransE hybrid MUTAG 0 1 1 0 5
+
+python -u tests.py DistMult reference AIFB 0 0 0 0 1
+python -u tests.py DistMult reference AIFB 0 0 0 0 5
+python -u tests.py DistMult reference AIFB 0 1 1 0 1
+python -u tests.py DistMult reference AIFB 0 1 1 0 5
+
+python -u tests.py DistMult reference MUTAG 0 0 0 0 1
+python -u tests.py DistMult reference MUTAG 0 0 0 0 5
+python -u tests.py DistMult reference MUTAG 0 1 1 0 1
+python -u tests.py DistMult reference MUTAG 0 1 1 0 5
+
+python -u tests.py DistMult clustering AIFB 0 0 0 0 1
+python -u tests.py DistMult clustering AIFB 0 0 0 0 5
+python -u tests.py DistMult clustering AIFB 0 1 1 0 1
+python -u tests.py DistMult clustering AIFB 0 1 1 0 5
+
+python -u tests.py DistMult clustering MUTAG 0 0 0 0 1
+python -u tests.py DistMult clustering MUTAG 0 0 0 0 5
+python -u tests.py DistMult clustering MUTAG 0 1 1 0 1
+python -u tests.py DistMult clustering MUTAG 0 1 1 0 5
+
+python -u tests.py DistMult lcwa AIFB 0 0 0 0 1
+python -u tests.py DistMult lcwa AIFB 0 0 0 0 5
+python -u tests.py DistMult lcwa AIFB 0 1 1 0 1
+python -u tests.py DistMult lcwa AIFB 0 1 1 0 5
+
+python -u tests.py DistMult lcwa MUTAG 0 0 0 0 1
+python -u tests.py DistMult lcwa MUTAG 0 0 0 0 5
+python -u tests.py DistMult lcwa MUTAG 0 1 1 0 1
+python -u tests.py DistMult lcwa MUTAG 0 1 1 0 5
+
+python -u tests.py DistMult strict AIFB 0 0 0 0 1
+python -u tests.py DistMult strict AIFB 0 0 0 0 5
+python -u tests.py DistMult strict AIFB 0 1 1 0 1
+python -u tests.py DistMult strict AIFB 0 1 1 0 5
+
+python -u tests.py DistMult strict MUTAG 0 0 0 0 1
+python -u tests.py DistMult strict MUTAG 0 0 0 0 5
+python -u tests.py DistMult strict MUTAG 0 1 1 0 1
+python -u tests.py DistMult strict MUTAG 0 1 1 0 5
+
+python -u tests.py DistMult standard AIFB 0 0 0 0 1
+python -u tests.py DistMult standard AIFB 0 0 0 0 5
+python -u tests.py DistMult standard AIFB 0 1 1 0 1
+python -u tests.py DistMult standard AIFB 0 1 1 0 5
+
+python -u tests.py DistMult standard MUTAG 0 0 0 0 1
+python -u tests.py DistMult standard MUTAG 0 0 0 0 5
+python -u tests.py DistMult standard MUTAG 0 1 1 0 1
+python -u tests.py DistMult standard MUTAG 0 1 1 0 5
+
+python -u tests.py DistMult hybrid AIFB 0 0 0 0 1
+python -u tests.py DistMult hybrid AIFB 0 0 0 0 5
+python -u tests.py DistMult hybrid AIFB 0 1 1 0 1
+python -u tests.py DistMult hybrid AIFB 0 1 1 0 5
+
+python -u tests.py DistMult hybrid MUTAG 0 0 0 0 1
+python -u tests.py DistMult hybrid MUTAG 0 0 0 0 5
+python -u tests.py DistMult hybrid MUTAG 0 1 1 0 1
+python -u tests.py DistMult hybrid MUTAG 0 1 1 0 5
+
