@@ -7,7 +7,7 @@ Link prediction experiments using knowledge graph embeddings powered by fuzzy co
 Running
 -------
 
-1. Clone this project: `git clone...`.
+1. Clone this project: `git clone https://github.com/IBCNServices/FuzzyConstraints.git`.
 2. Preferably create a virtual environment (`conda create --name fuzzyconstraints`) and activate it (`conda activate fuzzyconstraints`).
 3. `cd` to the project's root folder and install all required packages: `pip install -r requirements.txt`.
 4. Run `python tests.py` with default parameters `TransE reference AIFB 0 0 0 0 1` to run a basic test.
